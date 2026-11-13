@@ -1,0 +1,19 @@
+{
+  "_help": "Your application tracker. Company name must match companies.json. The status shows as a tag next to the company on the page. Edit any time on GitHub (pencil icon) and the page picks it up on the next update.",
+  "Nooks": "Interviewing",
+  "Harvey": "Interviewing",
+  "Kombo": "Recruiter screen",
+  "Pilot.com": "Recruiter screen",
+  "Palantir": "Interviewing",
+  "Legora": "Considering",
+  "Lovable": "Applied",
+  "Attio": "Applied",
+  "Spade": "Applied",
+  "Thera": "Applied",
+  "Partiful": "Applied",
+  "Baseten": "Applied",
+  "QuotaPath": "Applied",
+  "Cockroach Labs": "Applied",
+  "Pigment": "Applied",
+  "Motive": "Applied"
+}

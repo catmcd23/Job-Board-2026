@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Radar · Catherine</title>
+<style>
+  :root{
+    --bg:#f7f6f2; --card:#ffffff; --ink:#1c1c1a; --muted:#6b6a64; --line:#e4e2da;
+    --accent:#1f4e79; --accent-soft:#e6eef6; --new:#0f7b4a; --new-soft:#e3f4ea;
+    --warn:#9a6700; --warn-soft:#fbf1dc;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#141413; --card:#1d1d1b; --ink:#ecebe6; --muted:#9c9b94; --line:#2e2d2a;
+      --accent:#8db7e0; --accent-soft:#1e2c3a; --new:#5fcf96; --new-soft:#173325;
+      --warn:#e0b44f; --warn-soft:#352a12; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.45 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:32px 20px 60px}
+  header h1{margin:0;font-size:28px;letter-spacing:-.02em}
+  header p{margin:4px 0 0;color:var(--muted)}
+  .stats{display:flex;gap:12px;margin:22px 0 18px;flex-wrap:wrap}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 18px;min-width:150px}
+  .stat b{display:block;font-size:26px;font-variant-numeric:tabular-nums}
+  .stat span{color:var(--muted);font-size:13px}
+  .controls{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+  .row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .row label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em;width:72px}
+  button.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;
+    padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+  button.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--card)}
+  button.chip .n{opacity:.65;margin-left:4px;font-variant-numeric:tabular-nums}
+  input[type=search]{font:inherit;padding:6px 12px;border:1px solid var(--line);border-radius:8px;
+    background:var(--card);color:var(--ink);min-width:260px}
+  .toggle{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:13px;margin-left:8px}
+  .table{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:auto}
+  table{width:100%;border-collapse:collapse}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600;
+    position:sticky;top:0;background:var(--card);cursor:pointer;white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td.score{font-variant-numeric:tabular-nums;font-weight:600;width:56px}
+  td a{color:var(--accent);text-decoration:none} td a:hover{text-decoration:underline}
+  .co{font-weight:600}
+  .tag{display:inline-block;font-size:11px;border-radius:5px;padding:1px 6px;margin-left:6px;white-space:nowrap;vertical-align:1px}
+  .tag.status{background:var(--accent-soft);color:var(--accent)}
+  .tag.new{background:var(--new-soft);color:var(--new)}
+  .tag.stale{background:var(--warn-soft);color:var(--warn)}
+  .muted{color:var(--muted)} .small{font-size:13px}
+  .empty{padding:30px;text-align:center;color:var(--muted)}
+  details{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+  summary{cursor:pointer;font-weight:600}
+  .cols{columns:3 240px;margin-top:10px;font-size:13px}
+  .cols div{break-inside:avoid;padding:2px 0}
+  footer{margin-top:24px;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Job Radar</h1>
+    <p id="sub">Loading…</p>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b id="s-roles">–</b><span>matching roles</span></div>
+    <div class="stat"><b id="s-new">–</b><span>new since last run</span></div>
+    <div class="stat"><b id="s-cos">–</b><span>companies hiring</span></div>
+    <div class="stat"><b id="s-active">–</b><span>companies in my pipeline</span></div>
+  </div>
+
+  <div class="controls">
+    <div class="row"><label>Role</label><span id="f-cat"></span></div>
+    <div class="row"><label>Location</label><span id="f-tag"></span></div>
+    <div class="row"><label>In office</label><span id="f-off"></span></div>
+    <div class="row"><label>Search</label>
+      <input type="search" id="q" placeholder="Company or title…">
+      <span class="toggle"><input type="checkbox" id="newonly"><label for="newonly" style="width:auto;text-transform:none;letter-spacing:0;font-size:13px">New only</label></span>
+      <span class="toggle"><input type="checkbox" id="hidestale" checked><label for="hidestale" style="width:auto;text-transform:none;letter-spacing:0;font-size:13px">Hide posts older than 90 days</label></span>
+    </div>
+  </div>
+
+  <div class="table">
+    <table>
+      <thead><tr>
+        <th data-k="score" title="Role fit (50) + location (NYC 30 / Remote 20) + freshness (≤7d +20, ≤30d +10, >90d −30)">Score</th>
+        <th data-k="company">Company</th>
+        <th data-k="title">Role</th>
+        <th data-k="category">Category</th>
+        <th data-k="location">Location</th>
+        <th data-k="office_sort" title="Days in office per week, read from the job description. Hover a value to see the sentence it came from.">Office</th>
+        <th data-k="posted">Posted</th>
+        <th data-k="source">Source</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <details>
+    <summary id="cov-h">Board coverage</summary>
+    <div class="cols" id="cov"></div>
+  </details>
+  <details id="miss-box">
+    <summary id="miss-h">Not found on any board</summary>
+    <p class="small muted">These slugs didn't match Greenhouse, Lever or Ashby. Fix the slug in <code>companies.json</code> (it's the last part of the company's careers URL, e.g. jobs.ashbyhq.com/<b>slug</b>), or the company may use a different system.</p>
+    <div class="cols" id="miss"></div>
+  </details>
+
+  <footer>Sources: public Greenhouse, Lever and Ashby job boards. Updates automatically every weekday morning. Track applications in <code>status.json</code>.</footer>
+</div>
+
+<script>
+const CATS = ["All","Mid-Market AE","Enterprise AE","Founding / SMB AE","Account Executive","Account Manager / Expansion","Partnerships / BD","Deal Desk / GTM Ops"];
+const TAGS = ["All","NYC","Remote"];
+const OFFS = ["All","5 days","4 days","3 days","1–2 days","Hybrid, days not stated","On-site, days not stated","Remote","Not stated"];
+function offBucket(p){
+  const d = p.office_days;
+  if (d === 0 || p.office === "Remote") return "Remote";
+  if (d >= 5) return "5 days"; if (d === 4) return "4 days"; if (d === 3) return "3 days";
+  if (d === 1 || d === 2) return "1–2 days";
+  if (p.office.startsWith("Hybrid")) return "Hybrid, days not stated";
+  if (p.office.startsWith("On-site")) return "On-site, days not stated";
+  return "Not stated";
+}
+const state = {cat:"All", tag:"All", off:"All", q:"", newOnly:false, hideStale:true, sort:"score", dir:-1};
+let DATA = {postings:[], coverage:[], missing:[]};
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function base(){ // filters other than the chip being counted
+  return DATA.postings.filter(p =>
+    (!state.hideStale || !p.stale) &&
+    (!state.newOnly || p.new) &&
+    (!state.q || (p.company+" "+p.title).toLowerCase().includes(state.q)));
+}
+
+function chips(el, list, key, pool){
+  el.innerHTML = list.map(v => {
+    const field = {cat:"category", tag:"tag", off:"bucket"}[key];
+    const n = v==="All" ? pool.length : pool.filter(p => p[field]===v).length;
+    if (v!=="All" && n===0 && state[key]!==v) return "";
+    return `<button class="chip" aria-pressed="${state[key]===v}" data-v="${esc(v)}">${esc(v)}<span class="n">${n}</span></button>`;
+  }).join("");
+  el.querySelectorAll("button").forEach(b => b.onclick = () => { state[key] = b.dataset.v; render(); });
+}
+
+function render(){
+  const pool = base();
+  const okCat = p => state.cat==="All"||p.category===state.cat;
+  const okTag = p => state.tag==="All"||p.tag===state.tag;
+  const okOff = p => state.off==="All"||p.bucket===state.off;
+  chips($("f-cat"), CATS, "cat", pool.filter(p => okTag(p) && okOff(p)));
+  chips($("f-tag"), TAGS, "tag", pool.filter(p => okCat(p) && okOff(p)));
+  chips($("f-off"), OFFS, "off", pool.filter(p => okCat(p) && okTag(p)));
+
+  let rows = pool.filter(p => okCat(p) && okTag(p) && okOff(p));
+  const k = state.sort, d = state.dir;
+  rows.sort((a,b) => (a[k] > b[k] ? 1 : a[k] < b[k] ? -1 : 0) * d || b.score - a.score);
+
+  $("rows").innerHTML = rows.length ? rows.map(p => `
+    <tr>
+      <td class="score">${p.score}</td>
+      <td><span class="co">${esc(p.company)}</span>${p.status?`<span class="tag status">${esc(p.status)}</span>`:""}</td>
+      <td><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>${p.new?'<span class="tag new">New</span>':""}${p.stale?'<span class="tag stale">Old post</span>':""}${p.pay?`<div class="small muted">${esc(p.pay)}</div>`:""}</td>
+      <td class="small">${esc(p.category)}</td>
+      <td class="small">${esc(p.location)}${p.location.trim().toLowerCase()!==p.tag.toLowerCase()?`<br><span class="muted">${esc(p.tag)}</span>`:""}</td>
+      <td class="small"${p.office_quote?` title="${esc(p.office_quote)}" style="cursor:help;text-decoration:underline dotted"`:""}>${esc(p.office)}</td>
+      <td class="small" style="white-space:nowrap">${esc(p.posted)}</td>
+      <td class="small muted">${esc(p.source)}</td>
+    </tr>`).join("") : `<tr><td colspan="8" class="empty">No roles match these filters.</td></tr>`;
+
+  const live = DATA.postings.filter(p => !p.stale);
+  $("s-roles").textContent = live.length;
+  $("s-new").textContent = DATA.postings.filter(p => p.new).length;
+  $("s-cos").textContent = new Set(live.map(p => p.company)).size;
+  $("s-active").textContent = DATA.statusCount ?? 0;
+}
+
+document.querySelectorAll("th[data-k]").forEach(th => th.onclick = () => {
+  const k = th.dataset.k;
+  state.dir = state.sort===k ? -state.dir : (k==="score"||k==="posted" ? -1 : 1);
+  state.sort = k; render();
+});
+$("q").oninput = e => { state.q = e.target.value.trim().toLowerCase(); render(); };
+$("newonly").onchange = e => { state.newOnly = e.target.checked; render(); };
+$("hidestale").onchange = e => { state.hideStale = e.target.checked; render(); };
+
+Promise.all([
+  fetch("data.json", {cache:"no-store"}).then(r => r.json()),
+  fetch("status.json", {cache:"no-store"}).then(r => r.json()).catch(() => ({}))
+]).then(([data, status]) => {
+  // status.json is read live so edits show up without waiting for the next run
+  const st = Object.fromEntries(Object.entries(status).filter(([k]) => !k.startsWith("_")));
+  data.postings.forEach(p => {
+    p.status = st[p.company] || "";
+    p.office = p.office || "Not stated";
+    p.bucket = offBucket(p);
+    p.office_sort = p.office_days ?? -1;
+  });
+  data.statusCount = Object.keys(st).length;
+  DATA = data;
+  const u = new Date(data.updated);
+  $("sub").textContent = `Updated ${u.toLocaleString([], {month:"short",day:"numeric",year:"numeric",hour:"numeric",minute:"2-digit"})} · Sources: Greenhouse, Lever, Ashby`;
+  $("cov-h").textContent = `Board coverage (${data.coverage.length} companies)`;
+  $("cov").innerHTML = data.coverage.map(c => `<div>${esc(c.company)} <span class="muted">— ${esc(c.ats)}:${esc(c.slug)} · ${c.open_roles} open</span></div>`).join("");
+  if (data.missing.length){
+    $("miss-h").textContent = `Not found on any board (${data.missing.length})`;
+    $("miss").innerHTML = data.missing.map(m => `<div>${esc(m)}</div>`).join("");
+  } else $("miss-box").style.display = "none";
+  render();
+}).catch(() => {
+  $("sub").textContent = "No data yet. Run the “Update jobs” workflow under the Actions tab.";
+});
+</script>
+</body>
+</html>
