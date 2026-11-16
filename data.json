@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T08:32+00:00",
+ "updated": "2026-11-16T10:37+00:00",
  "postings": [
   {
    "id": "ab-baseten-c29d0cad-d4e4-4f96-b5f3-57b33150fcab",
@@ -1462,26 +1462,6 @@
    "new": false
   },
   {
-   "id": "ab-elevenlabs-9c44055f-3246-42ab-8bb6-d89258a8c43a",
-   "company": "ElevenLabs",
-   "status": "",
-   "title": "Employee Relations Partner",
-   "url": "https://jobs.ashbyhq.com/ElevenLabs/9c44055f-3246-42ab-8bb6-d89258a8c43a",
-   "category": "Partnerships / BD",
-   "location": "Remote / Dublin / New York / London",
-   "tag": "NYC",
-   "office_days": 0,
-   "office": "Remote",
-   "office_quote": "This role is remote-first, so it can be executed from anywhere in on the East Coast USA or Europe.",
-   "pay": "",
-   "posted": "2026-11-03",
-   "age_days": 12,
-   "stale": false,
-   "source": "Ashby",
-   "score": 90,
-   "new": false
-  },
-  {
    "id": "ab-writer-369e25b3-eecc-46fa-90cd-dc1c4bf1115e",
    "company": "Writer",
    "status": "",
@@ -1638,6 +1618,26 @@
    "age_days": 13,
    "stale": false,
    "source": "Greenhouse",
+   "score": 90,
+   "new": false
+  },
+  {
+   "id": "ab-elevenlabs-9c44055f-3246-42ab-8bb6-d89258a8c43a",
+   "company": "ElevenLabs",
+   "status": "",
+   "title": "Employee Relations Partner",
+   "url": "https://jobs.ashbyhq.com/ElevenLabs/9c44055f-3246-42ab-8bb6-d89258a8c43a",
+   "category": "Partnerships / BD",
+   "location": "Remote / Dublin / New York / London",
+   "tag": "NYC",
+   "office_days": 0,
+   "office": "Remote",
+   "office_quote": "This role is remote-first, so it can be executed from anywhere in on the East Coast USA or Europe.",
+   "pay": "",
+   "posted": "2026-11-03",
+   "age_days": 13,
+   "stale": false,
+   "source": "Ashby",
    "score": 90,
    "new": false
   },
@@ -2535,7 +2535,7 @@
    "office_quote": "",
    "pay": "$101K\u2013$134K",
    "posted": "2026-11-10",
-   "age_days": 5,
+   "age_days": 6,
    "stale": false,
    "source": "Greenhouse",
    "score": 85,
@@ -3482,13 +3482,13 @@
    "new": false
   },
   {
-   "id": "gh-samsara-8325407",
+   "id": "gh-samsara-8325409",
    "company": "Samsara",
    "status": "",
    "title": "Specialist Seller, Enterprise Core (Tracking Label)",
-   "url": "https://www.samsara.com/company/careers/roles/8325407?gh_jid=8325407",
+   "url": "https://www.samsara.com/company/careers/roles/8325409?gh_jid=8325409",
    "category": "Enterprise AE",
-   "location": "Remote - AZ; Remote - NY; Remote - TX",
+   "location": "Remote - CA; Remote - NC",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -3502,13 +3502,13 @@
    "new": false
   },
   {
-   "id": "gh-samsara-8325409",
+   "id": "gh-samsara-8325407",
    "company": "Samsara",
    "status": "",
    "title": "Specialist Seller, Enterprise Core (Tracking Label)",
-   "url": "https://www.samsara.com/company/careers/roles/8325409?gh_jid=8325409",
+   "url": "https://www.samsara.com/company/careers/roles/8325407?gh_jid=8325407",
    "category": "Enterprise AE",
-   "location": "Remote - CA; Remote - NC",
+   "location": "Remote - AZ; Remote - NY; Remote - TX",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -3802,26 +3802,6 @@
    "new": false
   },
   {
-   "id": "gh-samsara-8304547",
-   "company": "Samsara",
-   "status": "",
-   "title": "Account Executive, Mid Market (Northeast)",
-   "url": "https://www.samsara.com/company/careers/roles/8304547?gh_jid=8304547",
-   "category": "Mid-Market AE",
-   "location": "Remote - MA; Remote - RI",
-   "tag": "Remote",
-   "office_days": 0,
-   "office": "Remote",
-   "office_quote": "Our goal is to ensure that all members of our team can contribute effectively, whether they are working on-site, in a hybrid model, or fully remotely.",
-   "pay": "$152K\u2013$190K",
-   "posted": "2026-10-20",
-   "age_days": 26,
-   "stale": false,
-   "source": "Greenhouse",
-   "score": 80,
-   "new": false
-  },
-  {
    "id": "gh-samsara-8304559",
    "company": "Samsara",
    "status": "",
@@ -3842,53 +3822,13 @@
    "new": false
   },
   {
-   "id": "gh-samsara-8304495",
+   "id": "gh-samsara-8304547",
    "company": "Samsara",
    "status": "",
-   "title": "Account Executive, Mid Market (Southeast)",
-   "url": "https://www.samsara.com/company/careers/roles/8304495?gh_jid=8304495",
+   "title": "Account Executive, Mid Market (Northeast)",
+   "url": "https://www.samsara.com/company/careers/roles/8304547?gh_jid=8304547",
    "category": "Mid-Market AE",
-   "location": "Remote - VA Metro; Remote - WV Metro",
-   "tag": "Remote",
-   "office_days": 0,
-   "office": "Remote",
-   "office_quote": "Our goal is to ensure that all members of our team can contribute effectively, whether they are working on-site, in a hybrid model, or fully remotely.",
-   "pay": "$152K\u2013$190K",
-   "posted": "2026-10-20",
-   "age_days": 26,
-   "stale": false,
-   "source": "Greenhouse",
-   "score": 80,
-   "new": false
-  },
-  {
-   "id": "gh-samsara-8304486",
-   "company": "Samsara",
-   "status": "",
-   "title": "Account Executive, Mid Market (Southeast)",
-   "url": "https://www.samsara.com/company/careers/roles/8304486?gh_jid=8304486",
-   "category": "Mid-Market AE",
-   "location": "Atlanta, Georgia, United States; Remote - SC",
-   "tag": "Remote",
-   "office_days": 0,
-   "office": "Remote",
-   "office_quote": "Our goal is to ensure that all members of our team can contribute effectively, whether they are working on-site, in a hybrid model, or fully remotely.",
-   "pay": "$152K\u2013$190K",
-   "posted": "2026-10-20",
-   "age_days": 26,
-   "stale": false,
-   "source": "Greenhouse",
-   "score": 80,
-   "new": false
-  },
-  {
-   "id": "gh-samsara-8304491",
-   "company": "Samsara",
-   "status": "",
-   "title": "Account Executive, Mid Market (Southeast)",
-   "url": "https://www.samsara.com/company/careers/roles/8304491?gh_jid=8304491",
-   "category": "Mid-Market AE",
-   "location": "Remote - FL; Remote - NC",
+   "location": "Remote - MA; Remote - RI",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -3922,13 +3862,13 @@
    "new": false
   },
   {
-   "id": "gh-samsara-8304206",
+   "id": "gh-samsara-8304495",
    "company": "Samsara",
    "status": "",
-   "title": "Account Executive, Mid Market (TOLA)",
-   "url": "https://www.samsara.com/company/careers/roles/8304206?gh_jid=8304206",
+   "title": "Account Executive, Mid Market (Southeast)",
+   "url": "https://www.samsara.com/company/careers/roles/8304495?gh_jid=8304495",
    "category": "Mid-Market AE",
-   "location": "Remote - AL; Remote - MO",
+   "location": "Remote - VA Metro; Remote - WV Metro",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -3942,13 +3882,33 @@
    "new": false
   },
   {
-   "id": "gh-samsara-8304217",
+   "id": "gh-samsara-8304491",
    "company": "Samsara",
    "status": "",
-   "title": "Account Executive, Mid Market (TOLA)",
-   "url": "https://www.samsara.com/company/careers/roles/8304217?gh_jid=8304217",
+   "title": "Account Executive, Mid Market (Southeast)",
+   "url": "https://www.samsara.com/company/careers/roles/8304491?gh_jid=8304491",
    "category": "Mid-Market AE",
-   "location": "Remote - Houston",
+   "location": "Remote - FL; Remote - NC",
+   "tag": "Remote",
+   "office_days": 0,
+   "office": "Remote",
+   "office_quote": "Our goal is to ensure that all members of our team can contribute effectively, whether they are working on-site, in a hybrid model, or fully remotely.",
+   "pay": "$152K\u2013$190K",
+   "posted": "2026-10-20",
+   "age_days": 26,
+   "stale": false,
+   "source": "Greenhouse",
+   "score": 80,
+   "new": false
+  },
+  {
+   "id": "gh-samsara-8304486",
+   "company": "Samsara",
+   "status": "",
+   "title": "Account Executive, Mid Market (Southeast)",
+   "url": "https://www.samsara.com/company/careers/roles/8304486?gh_jid=8304486",
+   "category": "Mid-Market AE",
+   "location": "Atlanta, Georgia, United States; Remote - SC",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -4002,13 +3962,33 @@
    "new": false
   },
   {
-   "id": "gh-samsara-8304442",
+   "id": "gh-samsara-8304206",
    "company": "Samsara",
    "status": "",
-   "title": "Account Executive, Mid Market (West)",
-   "url": "https://www.samsara.com/company/careers/roles/8304442?gh_jid=8304442",
+   "title": "Account Executive, Mid Market (TOLA)",
+   "url": "https://www.samsara.com/company/careers/roles/8304206?gh_jid=8304206",
    "category": "Mid-Market AE",
-   "location": "Remote - ID; Remote - NM; Remote - UT",
+   "location": "Remote - AL; Remote - MO",
+   "tag": "Remote",
+   "office_days": 0,
+   "office": "Remote",
+   "office_quote": "Our goal is to ensure that all members of our team can contribute effectively, whether they are working on-site, in a hybrid model, or fully remotely.",
+   "pay": "$152K\u2013$190K",
+   "posted": "2026-10-20",
+   "age_days": 26,
+   "stale": false,
+   "source": "Greenhouse",
+   "score": 80,
+   "new": false
+  },
+  {
+   "id": "gh-samsara-8304217",
+   "company": "Samsara",
+   "status": "",
+   "title": "Account Executive, Mid Market (TOLA)",
+   "url": "https://www.samsara.com/company/careers/roles/8304217?gh_jid=8304217",
+   "category": "Mid-Market AE",
+   "location": "Remote - Houston",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -4029,6 +4009,26 @@
    "url": "https://www.samsara.com/company/careers/roles/8304430?gh_jid=8304430",
    "category": "Mid-Market AE",
    "location": "Remote - Denver; Remote - Seattle",
+   "tag": "Remote",
+   "office_days": 0,
+   "office": "Remote",
+   "office_quote": "Our goal is to ensure that all members of our team can contribute effectively, whether they are working on-site, in a hybrid model, or fully remotely.",
+   "pay": "$152K\u2013$190K",
+   "posted": "2026-10-20",
+   "age_days": 26,
+   "stale": false,
+   "source": "Greenhouse",
+   "score": 80,
+   "new": false
+  },
+  {
+   "id": "gh-samsara-8304442",
+   "company": "Samsara",
+   "status": "",
+   "title": "Account Executive, Mid Market (West)",
+   "url": "https://www.samsara.com/company/careers/roles/8304442?gh_jid=8304442",
+   "category": "Mid-Market AE",
+   "location": "Remote - ID; Remote - NM; Remote - UT",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -5022,26 +5022,6 @@
    "new": false
   },
   {
-   "id": "gh-alphasense-8826885002",
-   "company": "AlphaSense",
-   "status": "",
-   "title": "Sales Enablement Lead (Product Enablement)",
-   "url": "https://job-boards.greenhouse.io/alphasense/jobs/8826885002",
-   "category": "Deal Desk / GTM Ops",
-   "location": "IL Chicago; New York, New York, United States",
-   "tag": "NYC",
-   "office_days": null,
-   "office": "Not stated",
-   "office_quote": "",
-   "pay": "",
-   "posted": "2026-09-21",
-   "age_days": 55,
-   "stale": false,
-   "source": "Greenhouse",
-   "score": 80,
-   "new": false
-  },
-  {
    "id": "ab-openai-8c95db0d-982e-43cf-95e4-e30cb09e6c9c",
    "company": "OpenAI",
    "status": "",
@@ -5076,6 +5056,26 @@
    "pay": "$200K\u2013$230K",
    "posted": "2026-09-21",
    "age_days": 55,
+   "stale": false,
+   "source": "Greenhouse",
+   "score": 80,
+   "new": false
+  },
+  {
+   "id": "gh-alphasense-8826885002",
+   "company": "AlphaSense",
+   "status": "",
+   "title": "Sales Enablement Lead (Product Enablement)",
+   "url": "https://job-boards.greenhouse.io/alphasense/jobs/8826885002",
+   "category": "Deal Desk / GTM Ops",
+   "location": "IL Chicago; New York, New York, United States",
+   "tag": "NYC",
+   "office_days": null,
+   "office": "Not stated",
+   "office_quote": "",
+   "pay": "",
+   "posted": "2026-09-21",
+   "age_days": 56,
    "stale": false,
    "source": "Greenhouse",
    "score": 80,
@@ -7642,13 +7642,13 @@
    "new": false
   },
   {
-   "id": "gh-samsara-8162025",
+   "id": "gh-samsara-8162024",
    "company": "Samsara",
    "status": "",
    "title": "Account Executive, Commercial ( West)",
-   "url": "https://www.samsara.com/company/careers/roles/8162025?gh_jid=8162025",
+   "url": "https://www.samsara.com/company/careers/roles/8162024?gh_jid=8162024",
    "category": "Mid-Market AE",
-   "location": "Remote - US",
+   "location": "Remote - AZ; Remote - CA",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -7662,13 +7662,13 @@
    "new": false
   },
   {
-   "id": "gh-samsara-8162024",
+   "id": "gh-samsara-8162025",
    "company": "Samsara",
    "status": "",
    "title": "Account Executive, Commercial ( West)",
-   "url": "https://www.samsara.com/company/careers/roles/8162024?gh_jid=8162024",
+   "url": "https://www.samsara.com/company/careers/roles/8162025?gh_jid=8162025",
    "category": "Mid-Market AE",
-   "location": "Remote - AZ; Remote - CA",
+   "location": "Remote - US",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -8715,7 +8715,7 @@
    "office_quote": "",
    "pay": "$81K\u2013$180K",
    "posted": "2026-08-10",
-   "age_days": 97,
+   "age_days": 98,
    "stale": true,
    "source": "Greenhouse",
    "score": 50,
@@ -11762,13 +11762,13 @@
    "new": false
   },
   {
-   "id": "gh-samsara-7982331",
+   "id": "gh-samsara-7982336",
    "company": "Samsara",
    "status": "",
    "title": "Specialist Seller, Enterprise Core (AI Products)",
-   "url": "https://www.samsara.com/company/careers/roles/7982331?gh_jid=7982331",
+   "url": "https://www.samsara.com/company/careers/roles/7982336?gh_jid=7982336",
    "category": "Enterprise AE",
-   "location": "Remote - NY",
+   "location": "Remote - DC",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -11782,13 +11782,13 @@
    "new": false
   },
   {
-   "id": "gh-samsara-7982336",
+   "id": "gh-samsara-7982331",
    "company": "Samsara",
    "status": "",
    "title": "Specialist Seller, Enterprise Core (AI Products)",
-   "url": "https://www.samsara.com/company/careers/roles/7982336?gh_jid=7982336",
+   "url": "https://www.samsara.com/company/careers/roles/7982331?gh_jid=7982331",
    "category": "Enterprise AE",
-   "location": "Remote - DC",
+   "location": "Remote - NY",
    "tag": "Remote",
    "office_days": 0,
    "office": "Remote",
@@ -11835,7 +11835,7 @@
    "office_quote": "",
    "pay": "$124K\u2013$171K",
    "posted": "2026-06-01",
-   "age_days": 167,
+   "age_days": 168,
    "stale": true,
    "source": "Greenhouse",
    "score": 40,
@@ -12795,7 +12795,7 @@
    "office_quote": "",
    "pay": "",
    "posted": "2025-06-12",
-   "age_days": 521,
+   "age_days": 522,
    "stale": true,
    "source": "Greenhouse",
    "score": 40,
@@ -13055,11 +13055,11 @@
    "office_quote": "",
    "pay": "",
    "posted": "2024-03-07",
-   "age_days": 983,
+   "age_days": 984,
    "stale": true,
    "source": "Greenhouse",
    "score": 40,
-   "new": true
+   "new": false
   },
   {
    "id": "gh-gomotive-6056440002",
@@ -13075,7 +13075,7 @@
    "office_quote": "",
    "pay": "",
    "posted": "2022-04-12",
-   "age_days": 1678,
+   "age_days": 1679,
    "stale": true,
    "source": "Greenhouse",
    "score": 40,
@@ -13567,7 +13567,7 @@
    "company": "Cohere",
    "ats": "Ashby",
    "slug": "cohere",
-   "open_roles": 121
+   "open_roles": 122
   },
   {
    "company": "Databricks",
@@ -13597,7 +13597,7 @@
    "company": "ElevenLabs",
    "ats": "Ashby",
    "slug": "elevenlabs",
-   "open_roles": 124
+   "open_roles": 123
   },
   {
    "company": "Figma",
@@ -13633,7 +13633,7 @@
    "company": "Legora",
    "ats": "Ashby",
    "slug": "legora",
-   "open_roles": 343
+   "open_roles": 342
   },
   {
    "company": "Linear",
@@ -13663,19 +13663,19 @@
    "company": "MongoDB",
    "ats": "Greenhouse",
    "slug": "mongodb",
-   "open_roles": 390
+   "open_roles": 394
   },
   {
    "company": "Motive",
    "ats": "Greenhouse",
    "slug": "gomotive",
-   "open_roles": 182
+   "open_roles": 181
   },
   {
    "company": "Navan",
    "ats": "Greenhouse",
    "slug": "tripactions",
-   "open_roles": 233
+   "open_roles": 232
   },
   {
    "company": "Nooks",
@@ -13699,7 +13699,7 @@
    "company": "OpenAI",
    "ats": "Ashby",
    "slug": "openai",
-   "open_roles": 838
+   "open_roles": 839
   },
   {
    "company": "Palantir",
@@ -13717,7 +13717,7 @@
    "company": "Perplexity",
    "ats": "Ashby",
    "slug": "perplexity",
-   "open_roles": 141
+   "open_roles": 142
   },
   {
    "company": "Persona",
@@ -13777,7 +13777,7 @@
    "company": "Samsara",
    "ats": "Greenhouse",
    "slug": "samsara",
-   "open_roles": 317
+   "open_roles": 318
   },
   {
    "company": "Sardine",
@@ -13813,7 +13813,7 @@
    "company": "Stripe",
    "ats": "Greenhouse",
    "slug": "stripe",
-   "open_roles": 785
+   "open_roles": 786
   },
   {
    "company": "Supabase",
